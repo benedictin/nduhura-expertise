@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDUHURA EXPERTISE - Cabinet d'Expertise en Transformation Digitale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   
+</head>
+<body class="font-body text-brand-dark bg-white min-h-screen flex flex-col">
+    
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="#" class="font-heading font-bold text-xl md:text-2xl tracking-tight text-brand-black">
+                    NDUHURA <span class="text-gold">EXPERTISE</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="#a-propos" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">À propos</a>
+                <a href="#services" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Que faisons-nous ?</a>
+<a href="#offre" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Notre Offre</a>
+                <a href="#actualites" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Actualités</a>
+                <a href="#contact" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Contact</a>
+            </nav>
+
+            <!-- Language Switcher & Mobile Menu Button -->
+            <div class="flex items-center space-x-6">
+                <div class="hidden md:block text-xs font-medium text-gray-400 tracking-widest">
+                    <span class="text-brand-black">FR</span>
+                    <span class="mx-2">|</span>
+                    <span class="hover:text-gold cursor-pointer transition-colors">EN</span>
+                    <span class="mx-2">|</span>
+                    <span class="hover:text-gold cursor-pointer transition-colors">DE</span>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden relative w-10 h-10 flex items-center justify-center text-brand-black hover:text-gold transition-colors duration-200" aria-label="Ouvrir le menu">
+                    <svg id="menu-icon" class="w-6 h-6 absolute transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 absolute transition-all duration-300 opacity-0 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm mobile-overlay hidden lg:hidden"></div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="fixed top-0 right-0 z-40 h-full w-[280px] bg-white shadow-2xl mobile-menu hidden lg:hidden">
+        <div class="flex flex-col h-full pt-24 pb-8 px-8">
+            <nav class="flex flex-col space-y-1">
+                <a href="#a-propos" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">À propos</a>
+                <a href="#services" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Que faisons-nous ?</a>
+<a href="#offre" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Notre Offre</a>
+                <a href="#actualites" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Actualités</a>
+                <a href="#contact" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Contact</a>
+            </nav>
+
+            <!-- Mobile Language Switcher -->
+            <div class="mt-8 pt-6 border-t border-gray-100">
+                <div class="text-xs font-medium text-gray-400 tracking-widest flex items-center gap-3">
+                    <span class="text-brand-black font-semibold">FR</span>
+                    <span>|</span>
+                    <span class="hover:text-gold cursor-pointer transition-colors">EN</span>
+                    <span>|</span>
+                    <span class="hover:text-gold cursor-pointer transition-colors">DE</span>
+                </div>
+            </div>
+
+            <!-- Mobile CTA -->
+            <div class="mt-auto">
+                <a href="#contact" class="block w-full text-center bg-gold text-white py-3.5 font-heading font-semibold text-xs uppercase tracking-wider hover:bg-gold-light transition-all duration-300">Planifier un échange</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#0f1923] via-[#162230] to-[#1a2a3a]">
+            <!-- Subtle grid pattern overlay -->
+            <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(194,139,44,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(194,139,44,0.3) 1px, transparent 1px); background-size: 60px 60px;"></div>
+
+            <!-- Soft ambient glow -->
+            <div class="absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full blur-[150px]" style="background-color: rgba(194,139,44,0.05);"></div>
+            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full blur-[120px]" style="background-color: rgba(30,58,138,0.1);"></div>
+
+            <!-- Top gold accent -->
+            <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
+
+            <div class="relative max-w-7xl mx-auto px-6 w-full py-32">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <!-- Left: Text Content -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="w-10 h-px bg-gold"></div>
+                            <span class="text-gold text-xs font-bold uppercase tracking-[0.25em] font-heading">Nduhura Expertise</span>
+                        </div>
+
+                        <h1 class="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-8">
+                            Ne pas satisfaire son client,<br>
+                            <span class=" bg-clip-text bg-gradient-to-r from-gold to-gold-light">mais l'émerveiller.</span>
+                        </h1>
+
+                        <p class="text-gray-400 text-lg md:text-xl max-w-xl font-light leading-relaxed mb-10">
+                            Cabinet d'expertise en transformation digitale, management de projets IT et ingénierie logicielle.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                            <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-gold text-white font-heading font-semibold text-sm uppercase tracking-wider hover:bg-gold-light transition-all duration-300 shadow-lg" style="box-shadow: 0 10px 15px -3px rgba(194,139,44,0.1);">Planifier un échange</a>
+
+                            <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border border-white/15 text-white/80 font-heading font-semibold text-sm uppercase tracking-wider hover:border-gold/60 hover:text-gold transition-all duration-300 group">
+                                Nos expertises
+                                <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Mini stats -->
+                        <div class="flex gap-8 pt-8 border-t border-white/10">
+                            <div>
+                                <div class="text-2xl font-heading font-bold text-white">15+</div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider mt-1">Ans d'expérience</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-heading font-bold text-white">25+</div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider mt-1">Entreprises</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-heading font-bold text-white">100+</div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider mt-1">Projets livrés</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Visual -->
+                    <div class="hidden lg:block relative">
+                        <!-- Main image container -->
+                        <div class="relative rounded-lg overflow-hidden shadow-2xl border border-white/10" style="box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4);">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop&q=80" alt="Software engineering - code on screen" class="w-full h-[480px] object-cover">
+
+                            <!-- Overlay gradient -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0f1923]/80 via-transparent to-transparent"></div>
+                            <div class="absolute inset-0 bg-gradient-to-r from-[#0f1923]/30 to-transparent"></div>
+
+                            <!-- Bottom overlay text -->
+                            <div class="absolute bottom-0 left-0 right-0 p-6">
+                                <div class="flex items-center gap-2 text-gold text-xs font-bold uppercase tracking-widest">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                    </svg>
+                                    Ingénierie Logicielle
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating card: DevOps -->
+                        <div class="absolute -left-8 top-12 bg-[#1a2a3a]/90 backdrop-blur-md border border-white/10 rounded-lg p-4" style="box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background-color: rgba(194,139,44,0.1);">
+                                    <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-white text-sm font-semibold font-heading">DevOps</div>
+                                    <div class="text-gray-500 text-xs">CI/CD Pipeline</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating card: Agile -->
+                        <div class="absolute -right-4 top-1/3 bg-[#1a2a3a]/90 backdrop-blur-md border border-white/10 rounded-lg p-4" style="box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background-color: rgba(16,185,129,0.1);">
+                                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-white text-sm font-semibold font-heading">Agile</div>
+                                    <div class="text-gray-500 text-xs">Méthodologie</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating card: Architecture -->
+                        <div class="absolute -left-4 bottom-16 bg-[#1a2a3a]/90 backdrop-blur-md border border-white/10 rounded-lg p-4" style="box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background-color: rgba(59,130,246,0.1);">
+                                    <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-white text-sm font-semibold font-heading">Architecture</div>
+                                    <div class="text-gray-500 text-xs">Solutions sur mesure</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <div class="w-px h-12 bg-gradient-to-b from-transparent via-gold/40 to-transparent"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="a-propos" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-start">
+                    <!-- Left Column: Content -->
+                    <div>
+                        <span class="inline-block text-gold text-xs font-bold uppercase tracking-widest mb-4">À Propos</span>
+                        <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-black mb-8 leading-tight">L'excellence au service de votre transformation</h2>
+
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            NDUHURA EXPERTISE est né d'une vision simple : apporter une rigueur académique et une expertise technique de haut niveau aux défis numériques des entreprises modernes. Nous ne nous contentons pas de livrer des projets, nous bâtissons des fondations durables pour votre croissance.
+                        </p>
+
+                        <ul class="space-y-4 mb-12">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center mt-0.5 mr-3">
+                                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="text-brand-dark font-medium">Docteur en informatique et automatismes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center mt-0.5 mr-3">
+                                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="text-brand-dark font-medium">Professeur des universités</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center mt-0.5 mr-3">
+                                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="text-brand-dark font-medium">Spécialiste en génie logiciel</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center mt-0.5 mr-3">
+                                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="text-brand-dark font-medium">Consultant international</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center mt-0.5 mr-3">
+                                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="text-brand-dark font-medium">15+ ans d'expérience</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center mt-0.5 mr-3">
+                                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="text-brand-dark font-medium">Expérience dans plus de 25 entreprises</span>
+                            </li>
+                        </ul>
+
+                        <div class="pt-8 border-t border-gray-100">
+                            <p class="font-heading font-bold text-brand-black text-lg">Dr. Nduhura</p>
+                            <p class="text-gray-500 text-sm">Fondateur & CEO</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Visual & Stats -->
+                    <div class="relative">
+                        <!-- Portrait Placeholder -->
+                        <div class="relative aspect-[4/5] bg-brand-gray rounded-sm overflow-hidden mb-12 group max-w-sm mx-auto px-4">
+    
+                            <div class="absolute inset-0 border border-gray-100 p-4 z-10 transition-all duration-500 group-hover:p-2 group-hover:border-gold/50"></div>
+
+                            <div class="absolute inset-0 flex items-center justify-center bg-brand-dark/5">
+                                <div class="text-center w-full h-full">
+                                    <img src="images/justin-nduhura.png"
+                                            alt="justin-nduhura"
+                                            class="w-full h-full object-cover">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Stats Grid -->
+                        <div class="grid grid-cols-2 gap-8">
+                            <div class="text-center sm:text-left">
+                                <div class="text-4xl font-heading font-bold text-gold mb-1">15+</div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider">Années d'expérience</div>
+                            </div>
+                            <div class="text-center sm:text-left">
+                                <div class="text-4xl font-heading font-bold text-gold mb-1">25+</div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider">Entreprises accompagnées</div>
+                            </div>
+                            <div class="text-center sm:text-left">
+                                <div class="text-4xl font-heading font-bold text-gold mb-1">3</div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider">Continents</div>
+                            </div>
+                            <div class="text-center sm:text-left">
+                                <div class="text-4xl font-heading font-bold text-gold mb-1">100+</div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider">Projets livrés</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 bg-brand-gray">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-gold text-xs font-bold uppercase tracking-widest mb-3 block">Nos Services</span>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-black mb-6">Que faisons-nous ?</h2>
+                    <div class="w-16 h-px bg-gold mx-auto"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white p-8 rounded-sm border-t-2 border-transparent hover:border-gold shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                        <div class="w-12 h-12 bg-brand-gray rounded-full flex items-center justify-center mb-6 group-hover:bg-gold/10 transition-colors duration-300">
+                            <svg class="w-6 h-6 text-brand-dark group-hover:text-gold transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-brand-black mb-3">Conseil en informatique</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Audit, stratégie digitale et accompagnement à la transformation numérique pour aligner vos outils sur vos ambitions.</p>
+                        <div class="flex items-center text-gold text-xs font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            En savoir plus <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-white p-8 rounded-sm border-t-2 border-transparent hover:border-gold shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                        <div class="w-12 h-12 bg-brand-gray rounded-full flex items-center justify-center mb-6 group-hover:bg-gold/10 transition-colors duration-300">
+                            <svg class="w-6 h-6 text-brand-dark group-hover:text-gold transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-brand-black mb-3">Gestion de projets</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Pilotage de programmes IT complexes avec rigueur méthodologique (Agile, PMP) et excellence opérationnelle.</p>
+                        <div class="flex items-center text-gold text-xs font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            En savoir plus <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-white p-8 rounded-sm border-t-2 border-transparent hover:border-gold shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                        <div class="w-12 h-12 bg-brand-gray rounded-full flex items-center justify-center mb-6 group-hover:bg-gold/10 transition-colors duration-300">
+                            <svg class="w-6 h-6 text-brand-dark group-hover:text-gold transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-brand-black mb-3">Ingénierie logicielle</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Conception, développement et déploiement de solutions logicielles sur mesure, robustes et évolutives.</p>
+                        <div class="flex items-center text-gold text-xs font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            En savoir plus <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-white p-8 rounded-sm border-t-2 border-transparent hover:border-gold shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                        <div class="w-12 h-12 bg-brand-gray rounded-full flex items-center justify-center mb-6 group-hover:bg-gold/10 transition-colors duration-300">
+                            <svg class="w-6 h-6 text-brand-dark group-hover:text-gold transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-brand-black mb-3">Formation & accompagnement</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Transfert de compétences, coaching et montée en puissance de vos équipes techniques internes.</p>
+                        <div class="flex items-center text-gold text-xs font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            En savoir plus <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Offers Section -->
+        <section id="offre" class="py-24">
+            <div class="max-w-7xl mx-auto px-6 mb-16">
+                <span class="text-gold text-xs font-bold uppercase tracking-widest mb-3 block">Notre Offre</span>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-black">Des solutions sur mesure pour chaque défi</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 border-t border-gray-100">
+                <!-- Offer 1 -->
+                <div class="bg-white p-10 border-b border-r border-gray-100 hover:z-10 relative transition-all duration-300 hover:shadow-lg group">
+                    <h3 class="font-heading text-xl font-bold text-brand-black mb-4 group-hover:text-gold transition-colors">Conseil stratégique IT</h3>
+                    <div class="w-12 h-px bg-gold mb-6 opacity-50 group-hover:w-20 transition-all duration-300"></div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8">Nous accompagnons les dirigeants dans la définition et la mise en œuvre de leur stratégie numérique, en alignant technologie et objectifs métier pour une croissance durable.</p>
+<a href="offre-details.html?offre=conseil-strategique-it" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-brand-dark group-hover:text-gold transition-colors">
+                        Découvrir <svg class="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Offer 2 -->
+                <div class="bg-brand-gray p-10 border-b border-r border-gray-100 hover:z-10 relative transition-all duration-300 hover:shadow-lg group">
+                    <h3 class="font-heading text-xl font-bold text-brand-black mb-4 group-hover:text-gold transition-colors">Pilotage de projets</h3>
+                    <div class="w-12 h-px bg-gold mb-6 opacity-50 group-hover:w-20 transition-all duration-300"></div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8">Direction de programmes complexes avec une approche structurée, garantissant le respect des délais, budgets et standards de qualité internationaux.</p>
+                    <a href="offre-details.html?offre=pilotage-projets" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-brand-dark group-hover:text-gold transition-colors">
+                        Découvrir <svg class="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Offer 3 -->
+                <div class="bg-white p-10 border-b border-gray-100 hover:z-10 relative transition-all duration-300 hover:shadow-lg group">
+                    <h3 class="font-heading text-xl font-bold text-brand-black mb-4 group-hover:text-gold transition-colors">Développement sur mesure</h3>
+                    <div class="w-12 h-px bg-gold mb-6 opacity-50 group-hover:w-20 transition-all duration-300"></div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8">Conception et réalisation de solutions logicielles adaptées à vos processus métier et à vos exigences techniques, du backend robuste aux interfaces intuitives.</p>
+                    <a href="offre-details.html?offre=developpement-sur-mesure" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-brand-dark group-hover:text-gold transition-colors">
+                        Découvrir <svg class="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Offer 4 -->
+                <div class="bg-brand-gray p-10 border-b border-r border-gray-100 hover:z-10 relative transition-all duration-300 hover:shadow-lg group">
+                    <h3 class="font-heading text-xl font-bold text-brand-black mb-4 group-hover:text-gold transition-colors">Applications mobiles</h3>
+                    <div class="w-12 h-px bg-gold mb-6 opacity-50 group-hover:w-20 transition-all duration-300"></div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8">Développement d'applications mobiles iOS & Android performantes et intuitives pour accompagner votre transformation digitale et toucher vos utilisateurs partout.</p>
+                    <a href="offre-details.html?offre=applications-mobiles" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-brand-dark group-hover:text-gold transition-colors">
+                        Découvrir <svg class="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Offer 5 -->
+                <div class="bg-white p-10 border-b border-r border-gray-100 hover:z-10 relative transition-all duration-300 hover:shadow-lg group">
+                    <h3 class="font-heading text-xl font-bold text-brand-black mb-4 group-hover:text-gold transition-colors">Formation & Renfort</h3>
+                    <div class="w-12 h-px bg-gold mb-6 opacity-50 group-hover:w-20 transition-all duration-300"></div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8">Programmes de formation sur mesure et mise à disposition d'experts pour renforcer vos capacités internes et assurer l'autonomie de vos équipes.</p>
+                    <a href="offre-details.html?offre=formation-renfort" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-brand-dark group-hover:text-gold transition-colors">
+                        Découvrir <svg class="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Offer 6 -->
+                <div class="bg-brand-gray p-10 border-b border-gray-100 hover:z-10 relative transition-all duration-300 hover:shadow-lg group">
+                    <h3 class="font-heading text-xl font-bold text-brand-black mb-4 group-hover:text-gold transition-colors">Enseignement universitaire</h3>
+                    <div class="w-12 h-px bg-gold mb-6 opacity-50 group-hover:w-20 transition-all duration-300"></div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-8">Interventions académiques dans des universités de renom (Unikin, Unigom, Paris Nanterre, Usig) pour former la prochaine génération d'ingénieurs.</p>
+                    <a href="offre-details.html?offre=enseigment-universitaire" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-brand-dark group-hover:text-gold transition-colors">
+                        Découvrir <svg class="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="actualites" class="py-24 bg-brand-gray">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                    <div>
+                        <span class="text-gold text-xs font-bold uppercase tracking-widest mb-3 block">Actualités</span>
+                        <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-black">Nos dernières publications</h2>
+                    </div>
+                    <a href="#" class="hidden md:flex items-center text-sm font-semibold text-brand-dark hover:text-gold transition-colors mt-4 md:mt-0">
+                        Voir toutes les actualités <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- News 1 -->
+                    <div class="bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                        <div class="aspect-video bg-brand-dark relative flex items-center justify-center group-hover:opacity-90 transition-opacity">
+                            <div class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center text-xs text-gray-400 uppercase tracking-wider mb-3">
+                                <svg class="w-3 h-3 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                15 Janvier 2025
+                            </div>
+                            <h3 class="font-heading font-bold text-lg text-brand-black mb-3 group-hover:text-gold transition-colors">La transformation digitale en Afrique</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-2">Analyse des enjeux et opportunités de la digitalisation sur le continent africain.</p>
+                            <a href="#" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-gold hover:text-gold-light transition-colors">
+                                Voir sur YouTube <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- News 2 -->
+                    <div class="bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                        <div class="aspect-video bg-brand-dark relative flex items-center justify-center group-hover:opacity-90 transition-opacity">
+                            <div class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center text-xs text-gray-400 uppercase tracking-wider mb-3">
+                                <svg class="w-3 h-3 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                28 Décembre 2024
+                            </div>
+                            <h3 class="font-heading font-bold text-lg text-brand-black mb-3 group-hover:text-gold transition-colors">Gestion de projets IT : les clés du succès</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-2">Méthodologies et bonnes pratiques pour piloter des projets technologiques complexes.</p>
+                            <a href="#" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-gold hover:text-gold-light transition-colors">
+                                Voir sur YouTube <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- News 3 -->
+                    <div class="bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                        <div class="aspect-video bg-brand-dark relative flex items-center justify-center group-hover:opacity-90 transition-opacity">
+                            <div class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center text-xs text-gray-400 uppercase tracking-wider mb-3">
+                                <svg class="w-3 h-3 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                10 Novembre 2024
+                            </div>
+                            <h3 class="font-heading font-bold text-lg text-brand-black mb-3 group-hover:text-gold transition-colors">Intelligence artificielle et entreprise</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-2">Comment l'IA transforme les processus métier et crée de nouvelles opportunités.</p>
+                            <a href="#" class="inline-flex items-center text-xs font-bold uppercase tracking-widest text-gold hover:text-gold-light transition-colors">
+                                Voir sur YouTube <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center md:hidden">
+                    <a href="#" class="inline-flex items-center text-sm font-semibold text-brand-dark hover:text-gold transition-colors">
+                        Voir toutes les actualités <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <!-- Left: Form -->
+                    <div>
+                        <span class="text-gold text-xs font-bold uppercase tracking-widest mb-3 block">Contact</span>
+                        <h2 class="text-3xl md:text-4xl font-heading font-bold text-brand-black mb-8">Échangeons sur votre projet</h2>
+
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="nom" class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium">Nom complet</label>
+                                    <input type="text" id="nom" class="w-full bg-brand-gray border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/20 transition-all duration-200 rounded-sm" placeholder="Votre nom">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium">Email</label>
+                                    <input type="email" id="email" class="w-full bg-brand-gray border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/20 transition-all duration-200 rounded-sm" placeholder="votre@email.com">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="phone" class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium">Téléphone</label>
+                                    <input type="tel" id="phone" class="w-full bg-brand-gray border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/20 transition-all duration-200 rounded-sm" placeholder="+41 ...">
+                                </div>
+                                <div>
+                                    <label for="subject" class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium">Sujet</label>
+                                    <input type="text" id="subject" class="w-full bg-brand-gray border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/20 transition-all duration-200 rounded-sm" placeholder="Objet de votre demande">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium">Message</label>
+                                <textarea id="message" rows="5" class="w-full bg-brand-gray border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/20 transition-all duration-200 rounded-sm resize-none" placeholder="Comment pouvons-nous vous aider ?"></textarea>
+                            </div>
+
+                            <button type="button" class="w-full bg-gold text-white py-4 font-heading font-semibold uppercase tracking-wider text-sm hover:bg-gold-light transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center group">
+                                Envoyer le message
+                                <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Info -->
+                    <div class="lg:pl-12 lg:border-l border-gray-100 flex flex-col justify-center">
+                        <h3 class="font-heading font-bold text-xl text-brand-black mb-8">Nos bureaux</h3>
+
+                        <div class="space-y-8">
+                            <div class="flex items-start group">
+                                <div class="w-10 h-10 rounded-full bg-brand-gray flex items-center justify-center flex-shrink-0 mr-4 group-hover:bg-gold/10 transition-colors">
+                                    <svg class="w-5 h-5 text-brand-dark group-hover:text-gold transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-brand-black mb-1">Suisse</h4>
+                                    <p class="text-gray-500 text-sm leading-relaxed">Rue de Lyon 44<br>1203 Genève</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start group">
+                                <div class="w-10 h-10 rounded-full bg-brand-gray flex items-center justify-center flex-shrink-0 mr-4 group-hover:bg-gold/10 transition-colors">
+                                    <svg class="w-5 h-5 text-brand-dark group-hover:text-gold transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-brand-black mb-1">République Démocratique du Congo</h4>
+                                    <p class="text-gray-500 text-sm leading-relaxed">Kinshasa<br>République Démocratique du Congo</p>
+                                </div>
+                            </div>
+
+                            <div class="w-16 h-px bg-gray-200 my-8"></div>
+
+                            <div class="space-y-4">
+                                <div class="flex items-center text-gray-600 hover:text-gold transition-colors cursor-pointer">
+                                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span class="text-sm">contact@nduhura-expertise.com</span>
+                                </div>
+                                <div class="flex items-center text-gray-600 hover:text-gold transition-colors cursor-pointer">
+                                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                    </svg>
+                                    <span class="text-sm">+41 XX XXX XX XX</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-8">
+                                <a href="#" class="inline-flex items-center text-gold font-bold uppercase tracking-widest text-xs hover:text-gold-light transition-colors">
+                                    Planifier un échange stratégique <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class=" bg-gradient-to-br from-[#0f1923] via-[#162230] to-[#1a2a3a] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <a href="#" class="font-heading font-bold text-2xl tracking-tight text-white block mb-6">
+                        NDUHURA <span class="text-gold">EXPERTISE</span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mb-8">
+                        Cabinet d'expertise en transformation digitale, management de projets IT et ingénierie logicielle. L'excellence au service de votre performance.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-white transition-all duration-300 text-gray-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-white transition-all duration-300 text-gray-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-white transition-all duration-300 text-gray-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-white">Navigation</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#a-propos" class="text-gray-400 hover:text-gold transition-colors text-sm">À propos</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-gold transition-colors text-sm">Que faisons-nous ?</a></li>
+                        <li><a href="#offre" class="text-gray-400 hover:text-gold transition-colors text-sm">Notre Offre</a></li>
+                        <li><a href="#actualites" class="text-gray-400 hover:text-gold transition-colors text-sm">Actualités</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-gold transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Summary -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-white">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex flex-col">
+                            <span class="text-white font-medium mb-1">Suisse</span>
+                            <span>Rue de Lyon 44, 1203 Genève</span>
+                        </li>
+                        <li class="flex flex-col">
+                            <span class="text-white font-medium mb-1">RDC</span>
+                            <span>Kinshasa</span>
+                        </li>
+                        <li class="pt-4">
+                            <a href="mailto:contact@nduhura-expertise.com" class="hover:text-gold transition-colors">contact@nduhura-expertise.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2025 Nduhura Expertise. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+                    <a href="#" class="hover:text-white transition-colors">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

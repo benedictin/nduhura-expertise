@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Offres - NDUHURA EXPERTISE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="font-body text-brand-dark bg-white min-h-screen flex flex-col">
+    
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="index.html" class="font-heading font-bold text-xl md:text-2xl tracking-tight text-brand-black">
+                    NDUHURA <span class="text-gold">EXPERTISE</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="index.html#a-propos" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">À propos</a>
+                <a href="index.html#services" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Que faisons-nous ?</a>
+                <a href="index.html#offre" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Notre Offre</a>
+                <a href="index.html#actualites" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Actualités</a>
+                <a href="index.html#contact" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Contact</a>
+            </nav>
+
+            <!-- Language Switcher & Mobile Menu Button -->
+            <div class="flex items-center space-x-6">
+                <div class="hidden md:block text-xs font-medium text-gray-400 tracking-widest">
+                    <span class="text-brand-black">FR</span>
+                    <span class="mx-2">|</span>
+                    <span class="hover:text-gold cursor-pointer transition-colors">EN</span>
+                    <span class="mx-2">|</span>
+                    <span class="hover:text-gold cursor-pointer transition-colors">DE</span>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden relative w-10 h-10 flex items-center justify-center text-brand-black hover:text-gold transition-colors duration-200" aria-label="Ouvrir le menu">
+                    <svg id="menu-icon" class="w-6 h-6 absolute transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 absolute transition-all duration-300 opacity-0 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm mobile-overlay hidden lg:hidden"></div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="fixed top-0 right-0 z-40 h-full w-[280px] bg-white shadow-2xl mobile-menu hidden lg:hidden">
+        <div class="flex flex-col h-full pt-24 pb-8 px-8">
+            <nav class="flex flex-col space-y-1">
+                <a href="index.html#a-propos" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">À propos</a>
+                <a href="index.html#services" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Que faisons-nous ?</a>
+                <a href="index.html#offre" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Notre Offre</a>
+                <a href="index.html#actualites" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Actualités</a>
+                <a href="index.html#contact" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Contact</a>
+            </nav>
+
+            <!-- Mobile Language Switcher -->
+            <div class="mt-8 pt-6 border-t border-gray-100">
+                <div class="text-xs font-medium text-gray-400 tracking-widest flex items-center gap-3">
+                    <span class="text-brand-black font-semibold">FR</span>
+                    <span>|</span>
+                    <span class="hover:text-gold cursor-pointer transition-colors">EN</span>
+                    <span>|</span>
+                    <span class="hover:text-gold cursor-pointer transition-colors">DE</span>
+                </div>
+            </div>
+
+            <!-- Mobile CTA -->
+            <div class="mt-auto">
+                <a href="index.html#contact" class="block w-full text-center bg-gold text-white py-3.5 font-heading font-semibold text-xs uppercase tracking-wider hover:bg-gold-light transition-all duration-300">Planifier un échange</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-24">
+        <!-- Hero Section -->
+        <section class="py-16 md:py-24 bg-gradient-to-br from-[#0f1923] via-[#162230] to-[#1a2a3a]">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex items-center gap-3 mb-6">
+                    <a href="index.html#offre" class="text-gold text-xs font-bold uppercase tracking-widest hover:text-gold-light transition-colors flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                        Retour aux offres
+                    </a>
+                </div>
+                <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-4">Notre Offre</span>
+                <h1 id="offer-title" class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white leading-tight">
+                    Conseil stratégique IT
+                </h1>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-3 gap-12 lg:gap-16">
+                    <!-- Main Content -->
+                    <div class="lg:col-span-2">
+                        <div id="offer-icon" class="w-16 h-16 bg-brand-gray rounded-full flex items-center justify-center mb-8">
+                            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+
+                        <div class="prose prose-lg max-w-none">
+                            <h2 class="text-2xl font-heading font-bold text-brand-black mb-6">Description complète</h2>
+                            <p id="offer-description" class="text-gray-600 leading-relaxed mb-8">
+                                Nous accompagnons les dirigeants dans la définition et la mise en œuvre de leur stratégie numérique, en alignant technologie et objectifs métier pour une croissance durable.
+                            </p>
+
+                            <h3 class="text-xl font-heading font-bold text-brand-black mb-4">Ce que nous offrons</h3>
+                            <ul id="offer-features" class="space-y-4 mb-8">
+                                <li class="flex items-start">
+                                    <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center mt-0.5 mr-3">
+                                        <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="text-gray-600">Audit complet de votre infrastructure IT</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center mt-0.5 mr-3">
+                                        <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="text-gray-600">Élaboration d'une feuille de route digitale</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center mt-0.5 mr-3">
+                                        <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="text-gray-600">Conseil en выбор des technologies</span>
+                                </li>
+                            </ul>
+
+                            <h3 class="text-xl font-heading font-bold text-brand-black mb-4">Pourquoi choisir cette offre ?</h3>
+                            <p class="text-gray-600 leading-relaxed mb-8">
+                                Notre approche unique combine expertise technique et vision stratégique. Nous ne nous contentons pas de recommander des solutions, nous vous accompagnons dans leur mise en œuvre pour garantir des résultats concrets et mesurables.
+                            </p>
+
+                            <div class="bg-brand-gray p-8 rounded-sm border-l-4 border-gold">
+                                <h4 class="font-heading font-bold text-brand-black mb-3">Bénéfices clés</h4>
+                                <ul class="space-y-2">
+                                    <li class="text-gray-600 text-sm flex items-center">
+                                        <svg class="w-4 h-4 text-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        Optimisation des coûts IT
+                                    </li>
+                                    <li class="text-gray-600 text-sm flex items-center">
+                                        <svg class="w-4 h-4 text-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        Amélioration de la productivité
+                                    </li>
+                                    <li class="text-gray-600 text-sm flex items-center">
+                                        <svg class="w-4 h-4 text-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        Conformité et sécurité
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="lg:col-span-1">
+                        <div class="bg-brand-gray p-8 sticky top-24">
+                            <h3 class="font-heading font-bold text-lg text-brand-black mb-6">Demander un devis</h3>
+                            
+                            <form class="space-y-4">
+                                <div>
+                                    <label for="nom" class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium">Nom complet</label>
+                                    <input type="text" id="nom" class="w-full bg-white border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/20 transition-all duration-200 rounded-sm" placeholder="Votre nom">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium">Email</label>
+                                    <input type="email" id="email" class="w-full bg-white border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/20 transition-all duration-200 rounded-sm" placeholder="votre@email.com">
+                                </div>
+                                <div>
+                                    <label for="entreprise" class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium">Entreprise</label>
+                                    <input type="text" id="entreprise" class="w-full bg-white border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/20 transition-all duration-200 rounded-sm" placeholder="Nom de votre entreprise">
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium">Message</label>
+                                    <textarea id="message" rows="4" class="w-full bg-white border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/20 transition-all duration-200 rounded-sm resize-none" placeholder="Décrivez votre projet..."></textarea>
+                                </div>
+                                <button type="button" class="w-full bg-gold text-white py-4 font-heading font-semibold uppercase tracking-wider text-sm hover:bg-gold-light transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center group">
+                                    Envoyer la demande
+                                    <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </button>
+                            </form>
+
+                            <div class="mt-8 pt-8 border-t border-gray-200">
+                                <h4 class="font-heading font-bold text-sm text-brand-black mb-4">Autres offres</h4>
+                                <div class="space-y-3" id="other-offers">
+                                    <!-- Dynamically populated -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-16 bg-brand-gray">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <h2 class="text-2xl md:text-3xl font-heading font-bold text-brand-black mb-4">Vous avez des questions ?</h2>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Notre équipe est disponible pour discuter de vos besoins spécifiques et vous proposer une solution sur mesure.</p>
+                <a href="index.html#contact" class="inline-flex items-center justify-center px-8 py-4 bg-gold text-white font-heading font-semibold text-sm uppercase tracking-wider hover:bg-gold-light transition-all duration-300 shadow-lg">
+                    Planifier un échange
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class=" bg-gradient-to-br from-[#0f1923] via-[#162230] to-[#1a2a3a] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <a href="#" class="font-heading font-bold text-2xl tracking-tight text-white block mb-6">
+                        NDUHURA <span class="text-gold">EXPERTISE</span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mb-8">
+                        Cabinet d'expertise en transformation digitale, management de projets IT et ingénierie logicielle. L'excellence au service de votre performance.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-white transition-all duration-300 text-gray-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-white transition-all duration-300 text-gray-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-white transition-all duration-300 text-gray-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-white">Navigation</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#a-propos" class="text-gray-400 hover:text-gold transition-colors text-sm">À propos</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-gold transition-colors text-sm">Que faisons-nous ?</a></li>
+                        <li><a href="#offre" class="text-gray-400 hover:text-gold transition-colors text-sm">Notre Offre</a></li>
+                        <li><a href="#actualites" class="text-gray-400 hover:text-gold transition-colors text-sm">Actualités</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-gold transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Summary -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-white">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex flex-col">
+                            <span class="text-white font-medium mb-1">Suisse</span>
+                            <span>Rue de Lyon 44, 1203 Genève</span>
+                        </li>
+                        <li class="flex flex-col">
+                            <span class="text-white font-medium mb-1">RDC</span>
+                            <span>Kinshasa</span>
+                        </li>
+                        <li class="pt-4">
+                            <a href="mailto:contact@nduhura-expertise.com" class="hover:text-gold transition-colors">contact@nduhura-expertise.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2025 Nduhura Expertise. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+                    <a href="#" class="hover:text-white transition-colors">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Offer data
+        const offers = {
+            'conseil-strategique-it': {
+                title: 'Conseil stratégique IT',
+                shortTitle: 'Conseil stratégique IT',
+                description: 'Nous accompagnons les dirigeants dans la définition et la mise en œuvre de leur stratégie numérique, en alignant technologie et objectifs métier pour une croissance durable. Notre expertise nous permet de vous guider vers les meilleures solutions technologiques adaptées à votre secteur d\'activité.',
+                icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>',
+                features: [
+                    'Audit complet de votre infrastructure IT',
+                    'Élaboration d\'une feuille de route digitale',
+                    'Conseil en choix des technologies',
+                    'Analyse des risques et opportunités',
+                    'Benchmarking sectoriel'
+                ],
+                benefits: [
+                    'Optimisation des coûts IT',
+                    'Amélioration de la productivité',
+                    'Conformité et sécurité',
+                    'Décision éclairée'
+                ]
+            },
+            'pilotage-projets': {
+                title: 'Pilotage de projets',
+                shortTitle: 'Pilotage de projets',
+                description: 'Direction de programmes complexes avec une approche structurée, garantissant le respect des délais, budgets et standards de qualité internationaux. Nous apportons une méthodologie éprouvée pour mener à bien vos projets les plus ambitieux.',
+                icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>',
+                features: [
+                    'Direction de projet (PMO)',
+                    'Planification et suivi budgétaire',
+                    'Gestion des parties prenantes',
+                    'Management des risques',
+                    'Suivi des indicateurs de performance'
+                ],
+                benefits: [
+                    'Respect des délais',
+                    'Maîtrise du budget',
+                    'Qualité garantie',
+                    'Communication transparente'
+                ]
+            },
+            'developpement-sur-mesure': {
+                title: 'Développement sur mesure',
+                shortTitle: 'Développement sur mesure',
+                description: 'Conception et réalisation de solutions logicielles adaptées à vos processus métier et à vos exigences techniques, du backend robuste aux interfaces intuitives. Nous créons des applications qui s\'intègrent parfaitement à votre écosystème.',
+                icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>',
+                features: [
+                    'Architecture applicative',
+                    'Développement frontend et backend',
+                    'Intégration API',
+                    'Tests et qualité logicielle',
+                    'Maintenance et évolution'
+                ],
+                benefits: [
+                    'Solution parfaitement adaptée',
+                    'Scalabilité et performance',
+                    'Sécurité renforcée',
+                    'Autonomie technique'
+                ]
+            },
+            'applications-mobiles': {
+                title: 'Applications mobiles',
+                shortTitle: 'Applications mobiles',
+                description: 'Développement d\'applications mobiles iOS & Android performantes et intuitives pour accompagner votre transformation digitale et toucher vos utilisateurs partout. Nous créons des expériences mobiles exceptionnelles.',
+                icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>',
+                features: [
+                    'Développement natif iOS et Android',
+                    'Applications hybrides',
+                    'Design UX/UI mobile',
+                    'API backend',
+                    'Publication sur les stores'
+                ],
+                benefits: [
+                    'Presence mobile optimale',
+                    'Expérience utilisateur fluide',
+                    'Audience élargie',
+                    'Engagement client'
+                ]
+            },
+            'formation-renfort': {
+                title: 'Formation & Renfort',
+                shortTitle: 'Formation & Renfort',
+                description: 'Programmes de formation sur mesure et mise à disposition d\'experts pour renforcer vos capacités internes et assurer l\'autonomie de vos équipes. Nous partageons notre expertise pour votre réussite à long terme.',
+                icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>',
+                features: [
+                    'Formations techniques personnalisées',
+                    'Coaching individuel',
+                    'Mise à disposition d\'experts',
+                    'Montée en compétences',
+                    'Certification'
+                ],
+                benefits: [
+                    'Autonomie de vos équipes',
+                    'Transfert de compétences',
+                    'Flexibilité opérationnelle',
+                    'Réduction des coûts'
+                ]
+            },
+            'enseigment-universitaire': {
+                title: 'Enseignement universitaire',
+                shortTitle: 'Enseignement universitaire',
+                description: 'Interventions académiques dans des universités de renom (Unikin, Unigom, Paris Nanterre, Usig) pour former la prochaine génération d\'ingénieurs. Nous partageons notre savoir-faire avec les futurs leaders du numérique.',
+                icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>',
+                features: [
+                    'Cours magistraux',
+                    'Travaux dirigés',
+                    'Projets académiques',
+                    'Encadrement de thèses',
+                    'Conferences et workshops'
+                ],
+                benefits: [
+                    'Formation d\'excellence',
+                    'Rayonnement académique',
+                    'Innovation pédagogique',
+                    'Partenariats universitaires'
+                ]
+            }
+        };
+
+        // Get URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const offerId = urlParams.get('offre');
+
+        // Initialize page
+        function init() {
+            // Mobile menu functionality (same as main page)
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            let isMenuOpen = false;
+
+            function toggleMenu() {
+                isMenuOpen = !isMenuOpen;
+                
+                if (isMenuOpen) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('open');
+                    mobileOverlay.classList.remove('hidden');
+                    mobileOverlay.classList.add('open');
+                    document.body.style.overflow = 'hidden';
+                    
+                    menuIcon.classList.add('opacity-0', 'rotate-90');
+                    menuIcon.classList.remove('rotate-0');
+                    closeIcon.classList.remove('opacity-0', 'rotate-90');
+                    closeIcon.classList.add('opacity-100', 'rotate-0');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('open');
+                    mobileOverlay.classList.add('hidden');
+                    mobileOverlay.classList.remove('open');
+                    document.body.style.overflow = '';
+                    
+                    menuIcon.classList.remove('opacity-0', 'rotate-90');
+                    menuIcon.classList.add('rotate-0');
+                    closeIcon.classList.add('opacity-0', 'rotate-90');
+                    closeIcon.classList.remove('opacity-100', 'rotate-0');
+                }
+            }
+
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+            mobileOverlay.addEventListener('click', toggleMenu);
+
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (isMenuOpen) toggleMenu();
+                });
+            });
+
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    header.classList.add('bg-white', 'shadow-sm', 'py-4');
+                    header.classList.remove('bg-white/95', 'py-6');
+                } else {
+                    header.classList.remove('bg-white', 'shadow-sm', 'py-4');
+                    header.classList.add('bg-white/95', 'py-6');
+                }
+            });
+
+            // Load offer data
+            loadOffer(offerId);
+        }
+
+        function loadOffer(offerId) {
+            const offer = offers[offerId];
+            
+            if (!offer) {
+                // Default to first offer if not found
+                window.location.href = 'index.html#offre';
+                return;
+            }
+
+            // Update page title
+            document.title = `${offer.title} - NDUHURA EXPERTISE`;
+
+            // Update hero title
+            document.getElementById('offer-title').textContent = offer.title;
+
+            // Update icon
+            document.getElementById('offer-icon').innerHTML = `<svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">${offer.icon}</svg>`;
+
+            // Update description
+            document.getElementById('offer-description').textContent = offer.description;
+
+            // Update features
+            const featuresContainer = document.getElementById('offer-features');
+            featuresContainer.innerHTML = offer.features.map(feature => `
+                <li class="flex items-start">
+                    <span class="flex-shrink-0 w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center mt-0.5 mr-3">
+                        <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </span>
+                    <span class="text-gray-600">${feature}</span>
+                </li>
+            `).join('');
+
+            // Update other offers in sidebar
+            const otherOffersContainer = document.getElementById('other-offers');
+            const otherOffers = Object.entries(offers).filter(([id]) => id !== offerId);
+            
+            otherOffersContainer.innerHTML = otherOffers.map(([id, o]) => `
+                <a href="offre-details.html?offre=${id}" class="block py-2 text-sm text-gray-600 hover:text-gold transition-colors border-b border-gray-200 last:border-0">
+                    ${o.shortTitle}
+                </a>
+            `).join('');
+        }
+
+        // Initialize on DOM ready
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
+

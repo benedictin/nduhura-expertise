@@ -1,0 +1,79 @@
+
+:root {
+    --gold: #C28B2C;
+    --gold-light: #E0B45C;
+    --brand-black: #1C1C1C;
+    --brand-dark: #2E2E2E;
+    --brand-gray: #F6F6F6;
+}
+        
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-heading {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-gold { color: var(--gold); }
+.bg-gold { background-color: var(--gold); }
+.hover\:bg-gold:hover { background-color: var(--gold); }
+.text-gold-light { color: var(--gold-light); }
+.bg-gold-light { background-color: var(--gold-light); }
+.hover\:bg-gold-light:hover { background-color: var(--gold-light); }
+
+.text-brand-black { color: var(--brand-black); }
+.bg-brand-black { background-color: var(--brand-black); }
+.text-brand-dark { color: var(--brand-dark); }
+.bg-brand-dark { background-color: var(--brand-dark); }
+.bg-brand-gray { background-color: var(--brand-gray); }
+
+.border-gold { border-color: var(--gold); }
+.hover\:text-gold:hover { color: var(--gold); }
+.hover\:text-gold-light:hover { color: var(--gold-light); }
+
+.from-gold { --tw-gradient-from: var(--gold); }
+.to-gold-light { --tw-gradient-to: var(--gold-light); }
+
+.bg-gradient-to-br.from-\[\#0f1923\] {
+    background: linear-gradient(to bottom right, #0f1923, #162230, #1a2a3a);
+}
+
+.bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile menu transition */
+.mobile-menu {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.mobile-menu.hidden {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.mobile-overlay {
+    transition: opacity 0.3s ease-out;
+}
+
+.mobile-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mobile-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
