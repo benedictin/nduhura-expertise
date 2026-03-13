@@ -1,17 +1,23 @@
-# TODO - Page Détails des Offres
+# TODO: Ajout page Enseignement
 
-## Plan de mise en œuvre
+## Plan approuvé - Étapes à compléter:
 
-### Étape 1: Créer la page offre-details.html
-- [x] Créer la page HTML avec le même design que le site
-- [x] Ajouter le contenu détaillé pour les 6 offres
-- [x] Implémenter le JavaScript pour gérer les paramètres d'URL
+### ✅ Étape 1: Créer TODO.md (en cours)
 
-### Étape 2: Mettre à jour les liens dans index.html
-- [x] Modifier les liens "Découvrir" pour pointer vers offre-details.html avec le bon paramètre
-- [x] Corriger la navigation "Notre Offre" dans le menu pour revenir à la section sur la même page
+### ✅ Étape 2: Créer enseignement.html (nouvelle page complète)
 
-### Étape 3: Vérification
-- [x] Tester la navigation entre les pages
-- [x] Vérifier le design responsive
+### ✅ Étape 3: Modifier index.html 
+- Ajouter lien "Enseignement" dans navigation desktop/mobile
+- Mettre à jour lien 6ème offre vers enseignement.html
+
+### ✅ Étape 4: Modifier script.js 
+- Gérer nouveau lien mobile menu si nécessaire (non nécessaire - toggle existant OK)
+
+### ⏳ Étape 5: Tester 
+- Responsive design
+- Navigation fonctionne
+- Styles cohérents
+- Ouvrir preview
+
+### ✅ Étape 6: Finaliser et compléter
 

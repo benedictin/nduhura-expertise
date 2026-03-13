@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - NDUHURA EXPERTISE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="font-body text-brand-dark bg-white min-h-screen flex flex-col">
+    
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <div class="flex-shrink-0">
+                <a href="index.html" class="font-heading font-bold text-xl md:text-2xl tracking-tight text-brand-black">
+                   <img src="images/logo.png" alt="logo_Nduhura_expertise" srcset="">
+                </a>
+            </div>
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="index.html#a-propos" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">À propos</a>
+                <a href="index.html#services" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Que faisons-nous ?</a>
+                <a href="index.html#offre" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Notre Offre</a>
+                <a href="enseignement.html" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Enseignement</a>
+                <a href="publications.html" class="text-xs font-medium uppercase tracking-widest text-gold font-semibold">Publications</a>
+                <a href="index.html#actualites" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Actualités</a>
+                <a href="index.html#contact" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-6">
+                <div class="hidden md:block text-xs font-medium text-gray-400 tracking-widest">
+                    <span class="text-brand-black">FR</span>
+                    <span class="mx-2">|</span>
+                    <span class="hover:text-gold cursor-pointer transition-colors">EN</span>
+                    <span class="mx-2">|</span>
+                    <span class="hover:text-gold cursor-pointer transition-colors">DE</span>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden relative w-10 h-10 flex items-center justify-center text-brand-black hover:text-gold transition-colors duration-200" aria-label="Ouvrir le menu">
+                    <svg id="menu-icon" class="w-6 h-6 absolute transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 absolute transition-all duration-300 opacity-0 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-overlay" class="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm mobile-overlay hidden lg:hidden"></div>
+    <div id="mobile-menu" class="fixed top-0 right-0 z-40 h-full w-[280px] bg-white shadow-2xl mobile-menu hidden lg:hidden">
+        <div class="flex flex-col h-full pt-24 pb-8 px-8">
+            <nav class="flex flex-col space-y-1">
+                <a href="index.html#a-propos" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">À propos</a>
+                <a href="index.html#services" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Que faisons-nous ?</a>
+                <a href="index.html#offre" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Notre Offre</a>
+                <a href="enseignement.html" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Enseignement</a>
+                <a href="publications.html" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Publications</a>
+                <a href="index.html#actualites" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Actualités</a>
+                <a href="index.html#contact" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Contact</a>
+            </nav>
+            <div class=&quot:mt-auto">
+                <a href="index.html#contact" class="block w-full text-center bg-gold text-white py-3.5 font-heading font-semibold text-xs uppercase tracking-wider hover:bg-gold-light transition-all duration-300">Planifier un échange</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-24">
+        <!-- Hero -->
+        <section class="py-16 md:py-24 bg-gradient-to-br from-[#0f1923] via-[#162230] to-[#1a2a3a]">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex items-center gap-3 mb-6">
+                    <a href="index.html#offre" class="text-gold text-xs font-bold uppercase tracking-widest hover:text-gold-light transition-colors flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                        Retour aux offres
+                    </a>
+                </div>
+                <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-4">Publications Scientifiques</span>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white leading-tight">
+                    Travaux de recherche &amp; publications
+                </h1>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-3 gap-12 lg:gap-16">
+                    <div class="lg:col-span-2">
+                        <!-- Portrait -->
+                        <div class="relative mb-12 max-w-sm mx-auto">
+                            <img src="images/justin-nduhura.png" alt="Prof. Justin Nduhura" class="w-full h-80 object-cover rounded-lg shadow-2xl border-4 border-white">
+                        </div>
+
+                        <div class="space-y-12">
+                            <div class="publication-section">
+                                <h2 class="text-2xl font-heading font-bold text-brand-black mb-8 border-b pb-4 border-gold/30">Thèse de doctorat</h2>
+                                <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+                                    <div class="flex items-center gap-4 mb-6">
+                                        <a target="_blank" href="https://theses.hal.science/tel-00848578/file/Manuscrit_de_these_Justin_NDUHURA.pdf/" class="group">
+                                            <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-all">
+                                                <span class="text-white text-sm font-bold">HAL</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <p class="text-lg font-semibold text-brand-black mb-4">Nduhura Munga, J. (2012)</p>
+                                    <p class="text-brand-dark italic mb-6"><i>Mise en oeuvre et optimisation des plans de contrôle dynamique dans la fabrication des semi-conducteurs.</i></p>
+                                    <p class="text-gray-600">École Nationale Supérieure des Mines de Saint-Etienne, 269 pages. Saint-Etienne, France.</p>
+                                    <a href="https://theses.hal.science/tel-00848578/file/Manuscrit_de_these_Justin_NDUHURA.pdf/" target="_blank" class="mt-6 inline-flex items-center text-gold font-semibold hover:text-gold-light transition-colors">
+                                        Lire la thèse (PDF) <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="publication-section">
+                                <h2 class="text-2xl font-heading font-bold text-brand-black mb-8 border-b pb-4 border-gold/30">Livres</h2>
+                                <div class="grid md:grid-cols-2 gap-8">
+                                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-all">
+                                        <div class="flex items-center gap-3 mb-4">
+                                            <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
+                                                <span class="text-white text-xs font-bold">RG</span>
+                                            </div>
+                                            <div class="w-10 h-10 bg-gradient-to-br from-gray-500 to-gray-600 rounded-lg flex items-center justify-center">
+                                                <span class="text-white text-xs font-bold">GS</span>
+                                            </div>
+                                        </div>
+                                        <h3 class="font-semibold text-brand-black mb-2">Nduhura Munga, J. (2023)</h3>
+                                        <p class="text-brand-dark italic mb-4"><i>Projets informatiques – Pourquoi tant d'échecs ? – 7 Principales raisons.</i></p>
+                                        <p class="text-gray-600 text-sm mb-4">Les Editions Persée - L'arbre du Savoir, 46 pages.</p>
+                                        <a href="https://www.editions-persee.fr/catalogue/larbre-du-savoir/projets-informatiques-pourquoi-tant-dechecs-7-principales-raisons/" target="_blank" class="text-gold text-sm font-semibold hover:text-gold-light">Voir le livre</a>
+                                    </div>
+                                    <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-all">
+                                        <div class="flex items-center gap-3 mb-4">
+                                            <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
+                                                <span class="text-white text-xs font-bold">RG</span>
+                                            </div>
+                                            <div class="w-10 h-10 bg-gradient-to-br from-gray-500 to-gray-600 rounded-lg flex items-center justify-center">
+                                                <span class="text-white text-xs font-bold">GS</span>
+                                            </div>
+                                        </div>
+                                        <h3 class="font-semibold text-brand-black mb-2">Nduhura Munga, J. (2017)</h3>
+                                        <p class="text-brand-dark italic mb-4"><i>Optimisation des contrôles dans une chaîne de production industrielle.</i></p>
+                                        <p class="text-gray-600 text-sm mb-4">Editions universitaires européennes, 276 pages.</p>
+                                        <a href="https://my.editions-ue.com/catalog/details//store/fr/book/978-3-639-65110-2/optimisation-des-contr%C3%B4les-dans-une-cha%C3%AEne-de-production-industrielle/" target="_blank" class="text-gold text-sm font-semibold hover:text-gold-light">Voir le livre</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="publication-section">
+                                <h2 class="text-2xl font-heading font-bold text-brand-black mb-8 border-b pb-4 border-gold/30">Articles dans journaux internationaux</h2>
+                                <div class="space-y-6">
+                                    <div class="group bg-white p-6 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-all">
+                                        <div class="flex gap-3 mb-3">
+                                            <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center"><span class="text-white text-xs font-bold">RG</span></div>
+                                            <div class="w-10 h-10 bg-gradient-to-br from-gray-500 to-gray-600 rounded-lg flex items-center justify-center"><span class="text-white text-xs font-bold">GS</span></div>
+                                        </div>
+                                        <p class="font-semibold text-brand-black mb-2">Nduhura Munga, J. &amp; Kasongo, R. (2023)</p>
+                                        <p class="text-brand-dark mb-2"><i>Dynamic Management of Traffic Congestion - Case Study in Developing Countries.</i></p>
+                                        <p class="text-gray-600 text-sm mb-4"><i>International Journal of Traffic and Transportation Engineering, 12(3)</i>, 41-48.</p>
+                                        <a href="http://article.sapub.org/10.5923.j.ijtte.20231203.01.html" target="_blank" class="text-gold text-sm font-semibold hover:text-gold-light">Lire l'article</a>
+                                    </div>
+                                    <div class="group bg-white p-6 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-all">
+                                        <div class="flex gap-3 mb-3">
+                                            <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center"><span class="text-white text-xs font-bold">RG</span></div>
+                                            <div class="w-10 h-10 bg-gradient-to-br from-gray-500 to-gray-600 rounded-lg flex items-center justify-center"><span class="text-white text-xs font-bold">GS</span></div>
+                                        </div>
+                                        <p class="font-semibold text-brand-black mb-2">Nduhura Munga, J., Dauzère-Pérès, S., Yugma, C., &amp; Vialletelle, P. (2015)</p>
+                                        <p class="text-brand-dark mb-2"><i>A Mathematical Programming Approach for Optimizing Control Plans in Semiconductor Manufacturing.</i></p>
+                                        <p class="text-gray-600 text-sm mb-4"><i>International Journal of Production Economics, 160</i>, 213-219.</p>
+                                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0925527314003545" target="_blank" class="text-gold text-sm font-semibold hover:text-gold-light">Lire l'article</a>
+                                    </div>
+                                    <!-- Add more articles similarly -->
+                                </div>
+                            </div>
+
+                            <!-- Conferences, Posters, etc. similar structure with cards -->
+                            <div class="publication-section">
+                                <h2 class="text-2xl font-heading font-bold text-brand-black mb-8 border-b pb-4 border-gold/30">Autres publications</h2>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="bg-gold/10 p-6 rounded-lg border border-gold/30">
+                                        <h3 class="font-semibold text-gold mb-2">Conférences avec actes</h3>
+                                        <p class="text-sm text-gray-600">12 publications dans des conférences internationales</p>
+                                    </div>
+                                    <div class="bg-gold/10 p-6 rounded-lg border border-gold/30">
+                                        <h3 class="font-semibold text-gold mb-2">Posters</h3>
+                                        <p class="text-sm text-gray-600">2 posters de recherche</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="lg:col-span-1">
+                        <div class="bg-brand-gray p-8 sticky top-24">
+                            <h3 class="font-heading font-bold text-lg text-brand-black mb-6">Contact publication</h3>
+                            <form class="space-y-4">
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider text-gray-500 mb-2">Nom</label>
+                                    <input type="text" class="w-full bg-white border px-4 py-3 text-sm rounded-sm focus:border-gold" placeholder="Votre nom">
+                                </div>
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider text-gray-500 mb-2">Email</label>
+                                    <input type="email" class="w-full bg-white border px-4 py-3 text-sm rounded-sm focus:border-gold" placeholder="email@example.com">
+                                </div>
+                                <div>
+                                    <label class="block text-xs uppercase tracking-wider text-gray-500 mb-2">Sujet</label>
+                                    <input type="text" class="w-full bg-white border px-4 py-3 text-sm rounded-sm focus:border-gold" placeholder="Article / Citation / Autre">
+                                </div>
+                                <button type="submit" class="w-full bg-gold text-white py-4 font-semibold uppercase tracking-wider text-sm hover:bg-gold-light transition-all rounded-sm shadow-md">
+                                    Envoyer
+                                </button>
+                            </form>
+                            <div class="mt-8 pt-8 border-t border-gray-200">
+                                <h4 class="font-bold text-sm text-brand-black mb-4">Profils académiques</h4>
+                                <div class="flex gap-3">
+                                    <a href="https://scholar.google.com/citations?user=vjH8SqcAAAAJ&amp;hl=fr/" target="_blank" class="w-full bg-white p-3 rounded-lg border flex items-center justify-center gap-2 hover:shadow-md transition-all">
+                                        <div class="w-8 h-8 bg-gradient-to-br from-gray-500 to-gray-600 rounded flex items-center justify-center"><span class="text-white text-xs font-bold">GS</span></div>
+                                        Google Scholar
+                                    </a>
+                                    <a href="https://www.researchgate.net/profile/Justin-Nduhura-Munga-2/" target="_blank" class="w-full bg-white p-3 rounded-lg border flex items-center justify-center gap-2 hover:shadow-md transition-all">
+                                        <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-green-600 rounded flex items-center justify-center"><span class="text-white text-xs font-bold">RG</span></div>
+                                        ResearchGate
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-16 bg-brand-gray">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <h2 class="text-2xl md:text-3xl font-heading font-bold text-brand-black mb-4">Intéressé par la recherche ?</h2>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Contactez-nous pour collaborations, citations ou demandes de documents.</p>
+                <a href="index.html#contact" class="inline-flex px-8 py-4 bg-gold text-white font-heading font-semibold text-sm uppercase tracking-wider hover:bg-gold-light transition-all shadow-lg">
+                    Nous contacter
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-[#0f1923] via-[#162230] to-[#1a2a3a] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12 mb-16">
+                <div>
+                    <a href="index.html" class="font-heading font-bold text-2xl tracking-tight text-white block mb-6">
+                        NDUHURA <span class="text-gold">EXPERTISE</span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mb-8">
+                        Excellence scientifique et académique au service de l'industrie.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-white transition-all text-gray-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-white transition-all text-gray-400"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-white">Navigation</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html#a-propos" class="text-gray-400 hover:text-gold transition-colors text-sm">À propos</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-gold transition-colors text-sm">Que faisons-nous ?</a></li>
+                        <li><a href="index.html#offre" class="text-gray-400 hover:text-gold transition-colors text-sm">Notre Offre</a></li>
+                        <li><a href="enseignement.html" class="text-gray-400 hover:text-gold transition-colors text-sm">Enseignement</a></li>
+                        <li><a href="publications.html" class="text-gray-400 hover:text-gold transition-colors text-sm">Publications</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-gold transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-white">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex flex-col">
+                            <span class="text-white font-medium mb-1">Suisse</span>
+                            <span>Rue de Lyon 44, 1203 Genève</span>
+                        </li>
+                        <li class="flex flex-col">
+                            <span class="text-white font-medium mb-1">RDC</span>
+                            <span>Kinshasa</span>
+                        </li>
+                        <li class="pt-4">
+                            <a href="mailto:contact@nduhura-expertise.com" class="hover:text-gold transition-colors">contact@nduhura-expertise.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&amp;copy; 2025 Nduhura Expertise. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+                    <a href="#" class="hover:text-white transition-colors">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            
+            function toggleMenu() {
+                mobileMenu.classList.toggle('hidden');
+                mobileOverlay.classList.toggle('hidden');
+            }
+            
+            mobileMenuBtn?.addEventListener('click', toggleMenu);
+            mobileOverlay?.addEventListener('click', toggleMenu);
+            
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.getElementById('header');
+                if (window.scrollY > 20) {
+                    header.classList.add('shadow-sm', 'py-4');
+                } else {
+                    header.classList.remove('shadow-sm', 'py-4');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

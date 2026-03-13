@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enseignement - NDUHURA EXPERTISE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="font-body text-brand-dark bg-white min-h-screen flex flex-col">
+    
+    <!-- Header (same as index.html) -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <div class="flex-shrink-0">
+                <img src="images/logo.png" alt="logo_Nduhura_expertise" srcset="">
+            </div>
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="index.html#a-propos" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">À propos</a>
+                <a href="index.html#services" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Que faisons-nous ?</a>
+                <a href="index.html#offre" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Notre Offre</a>
+                <a href="enseignement.html" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Enseignement</a>
+                <a href="index.html#actualites" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Actualités</a>
+                <a href="index.html#contact" class="text-xs font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-300">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-6">
+                <div class="hidden md:block text-xs font-medium text-gray-400 tracking-widest">
+                    <span class="text-brand-black">FR</span>
+                    <span class="mx-2">|</span>
+                    <span class="hover:text-gold cursor-pointer transition-colors">EN</span>
+                    <span class="mx-2">|</span>
+                    <span class="hover:text-gold cursor-pointer transition-colors">DE</span>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden relative w-10 h-10 flex items-center justify-center text-brand-black hover:text-gold transition-colors duration-200" aria-label="Ouvrir le menu">
+                    <svg id="menu-icon" class="w-6 h-6 absolute transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 absolute transition-all duration-300 opacity-0 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm mobile-overlay hidden lg:hidden"></div>
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="fixed top-0 right-0 z-40 h-full w-[280px] bg-white shadow-2xl mobile-menu hidden lg:hidden">
+        <div class="flex flex-col h-full pt-24 pb-8 px-8">
+            <nav class="flex flex-col space-y-1">
+                <a href="index.html#a-propos" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">À propos</a>
+                <a href="index.html#services" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Que faisons-nous ?</a>
+                <a href="index.html#offre" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Notre Offre</a>
+                <a href="enseignement.html" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Enseignement</a>
+                <a href="index.html#actualites" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Actualités</a>
+                <a href="index.html#contact" class="py-4 text-sm font-medium uppercase tracking-widest text-brand-dark hover:text-gold transition-colors duration-200 border-b border-gray-100">Contact</a>
+            </nav>
+            <div class="mt-8 pt-6 border-t border-gray-100">
+                <div class="text-xs font-medium text-gray-400 tracking-widest flex items-center gap-3">
+                    <span class="text-brand-black font-semibold">FR</span>
+                    <span>|</span>
+                    <span class="hover:text-gold cursor-pointer transition-colors">EN</span>
+                    <span>|</span>
+                    <span class="hover:text-gold cursor-pointer transition-colors">DE</span>
+                </div>
+            </div>
+            <div class="mt-auto">
+                <a href="index.html#contact" class="block w-full text-center bg-gold text-white py-3.5 font-heading font-semibold text-xs uppercase tracking-wider hover:bg-gold-light transition-all duration-300">Planifier un échange</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-24">
+        <!-- Hero Section -->
+        <section class="py-16 md:py-24 bg-gradient-to-br from-[#0f1923] via-[#162230] to-[#1a2a3a]">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex items-center gap-3 mb-6">
+                    <a href="index.html#offre" class="text-gold text-xs font-bold uppercase tracking-widest hover:text-gold-light transition-colors flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                        Retour à nos offres
+                    </a>
+                </div>
+                <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-4">Enseignement Universitaire</span>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white leading-tight">
+                    Prof. Justin NDUHURA MUNGA, PhD, Dr.
+                </h1>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-3 gap-12 lg:gap-16">
+                    <!-- Main Content -->
+                    <div class="lg:col-span-2">
+                        <!-- Icon -->
+                        <div class="w-16 h-16 bg-brand-gray rounded-full flex items-center justify-center mb-8">
+                            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+
+                        <div class="prose prose-lg max-w-none mb-12">
+                            <h2 class="text-2xl font-heading font-bold text-brand-black mb-6">Professeur Associé</h2>
+                            <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+                                <strong>Université de Kinshasa</strong><br>
+                                Faculté des Sciences<br>
+                                Département de Mathématiques et Informatique
+                            </p>
+
+                            <h3 class="text-xl font-heading font-bold text-brand-black mb-6 mt-12">Cours dispensés</h3>
+                            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                                <div class="bg-brand-gray p-6 rounded-sm border border-gray-100 hover:border-gold/50 transition-all duration-300 hover:shadow-md">
+                                    <h4 class="font-semibold text-brand-black mb-2">Modélisation</h4>
+                                </div>
+                                <div class="bg-brand-gray p-6 rounded-sm border border-gray-100 hover:border-gold/50 transition-all duration-300 hover:shadow-md">
+                                    <h4 class="font-semibold text-brand-black mb-2">MERISE</h4>
+                                </div>
+                                <div class="bg-brand-gray p-6 rounded-sm border border-gray-100 hover:border-gold/50 transition-all duration-300 hover:shadow-md">
+                                    <h4 class="font-semibold text-brand-black mb-2">UML</h4>
+                                </div>
+                                <div class="bg-brand-gray p-6 rounded-sm border border-gray-100 hover:border-gold/50 transition-all duration-300 hover:shadow-md">
+                                    <h4 class="font-semibold text-brand-black mb-2">Programmation mobile</h4>
+                                </div>
+                                <div class="bg-brand-gray p-6 rounded-sm border border-gray-100 hover:border-gold/50 transition-all duration-300 hover:shadow-md">
+                                    <h4 class="font-semibold text-brand-black mb-2">Programmation orientée objet</h4>
+                                </div>
+                                <div class="bg-brand-gray p-6 rounded-sm border border-gray-100 hover:border-gold/50 transition-all duration-300 hover:shadow-md">
+                                    <h4 class="font-semibold text-brand-black mb-2">Algorithmique</h4>
+                                </div>
+                                <div class="bg-brand-gray p-6 rounded-sm border border-gray-100 hover:border-gold/50 transition-all duration-300 hover:shadow-md">
+                                    <h4 class="font-semibold text-brand-black mb-2">Systèmes embarqués</h4>
+                                </div>
+                                <div class="bg-brand-gray p-6 rounded-sm border border-gray-100 hover:border-gold/50 transition-all duration-300 hover:shadow-md">
+                                    <h4 class="font-semibold text-brand-black mb-2">Bases de données relationnelles</h4>
+                                </div>
+                                <div class="bg-brand-gray p-6 rounded-sm border border-gray-100 hover:border-gold/50 transition-all duration-300 hover:shadow-md">
+                                    <h4 class="font-semibold text-brand-black mb-2">Gestion de projets informatiques</h4>
+                                </div>
+                                <div class="bg-brand-gray p-6 rounded-sm border border-gray-100 hover:border-gold/50 transition-all duration-300 hover:shadow-md">
+                                    <h4 class="font-semibold text-brand-black mb-2">Géométrie descriptive</h4>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-heading font-bold text-brand-black mb-4 mt-12">Universités partenaires</h3>
+                            <div class="flex flex-wrap gap-4 mb-12">
+                                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 w-28">
+                                    <div class="w-16 h-16 rounded-full bg-gradient-to-br flex items-center justify-center mb-2 shadow-lg">
+                                        <span class="text-white font-bold text-sm font-heading"><img src="images/unikin_logo.png" alt="logo_unikin" ></span>
+                                    </div>
+                                    <span class="text-xs text-gray-600 text-center font-medium">Université de Kinshasa</span>
+                                </div>
+                                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 w-28">
+                                    <div class="w-16 h-16 rounded-full bg-gradient-to-br  flex items-center justify-center mb-2 shadow-lg">
+                                        <span class="text-white font-bold text-xs font-heading"><img src="images/unigom_logo.png" alt="logo_unigom" ></span>
+                                    </div>
+                                    <span class="text-xs text-gray-600 text-center font-medium">Université de Goma</span>
+                                </div>
+                                <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 w-28">
+                                    <div class="w-16 h-16 rounded-full bg-gradient-to-br flex items-center justify-center mb-2 shadow-lg">
+                                        <span class="text-white font-bold text-xs font-heading"><img src="images/paris-nanterre_logo.png" alt="logo_uniparix" ></span>
+                                    </div>
+                                    <span class="text-xs text-gray-600 text-center font-medium">Université Paris X</span>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-heading font-bold text-brand-black mb-6 mt-12">Espace étudiants</h3>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div class="bg-brand-gray p-8 rounded-sm border border-gray-100 hover:border-gold hover:shadow-lg transition-all duration-300 group">
+                                    <h4 class="font-heading font-bold text-lg text-brand-black mb-3 group-hover:text-gold">Université de Kinshasa - UNIKIN</h4>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-center"><svg class="w-4 h-4 text-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Cours & supports</li>
+                                        <li class="flex items-center"><svg class="w-4 h-4 text-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>TD & TP</li>
+                                        
+                                    </ul>
+                                    <a href="#" class="mt-4 inline-flex items-center text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">Accéder à l'espace <svg class="ml-1 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                                </div>
+                                <div class="bg-brand-gray p-8 rounded-sm border border-gray-100 hover:border-gold hover:shadow-lg transition-all duration-300 group">
+                                    <h4 class="font-heading font-bold text-lg text-brand-black mb-3 group-hover:text-gold">Université de Goma - UNIGOM</h4>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-center"><svg class="w-4 h-4 text-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Cours & supports</li>
+                                        <li class="flex items-center"><svg class="w-4 h-4 text-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>TD & TP</li>
+                                        
+                                    </ul>
+                                    <a href="#" class="mt-4 inline-flex items-center text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">Accéder à l'espace <svg class="ml-1 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                                </div>
+                                <div class="bg-brand-gray p-8 rounded-sm border border-gray-100 hover:border-gold hover:shadow-lg transition-all duration-300 group">
+                                    <h4 class="font-heading font-bold text-lg text-brand-black mb-3 group-hover:text-gold">Université Paris X</h4>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-center"><svg class="w-4 h-4 text-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Cours & supports</li>
+                                        <li class="flex items-center"><svg class="w-4 h-4 text-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>TD & TP</li>
+                                        
+                                    </ul>
+                                    <a href="#" class="mt-4 inline-flex items-center text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">Accéder à l'espace <svg class="ml-1 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gold/5 p-8 rounded-sm border-l-4 border-gold">
+                            <h4 class="font-heading font-bold text-brand-black mb-3 text-lg">Contact pédagogique</h4>
+                            <p class="text-gray-600 mb-4">Pour toute question sur les cours ou accès aux ressources étudiants.</p>
+                            <a href="index.html#contact" class="inline-flex items-center text-gold font-semibold hover:text-gold-light transition-colors">
+                                Nous contacter <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="lg:col-span-1">
+                        <div class="bg-brand-gray p-8 sticky top-24">
+                            <h3 class="font-heading font-bold text-lg text-brand-black mb-6">Contact rapide</h3>
+                            <form class="space-y-4">
+                                <div>
+                                    <label for="nom" class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium">Nom</label>
+                                    <input type="text" id="nom" class="w-full bg-white border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/20 transition-all duration-200 rounded-sm" placeholder="Votre nom">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium">Email</label>
+                                    <input type="email" id="email" class="w-full bg-white border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/20 transition-all duration-200 rounded-sm" placeholder="votre@email.com">
+                                </div>
+                                <div>
+                                    <label for="sujet" class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium">Sujet</label>
+                                    <input type="text" id="sujet" class="w-full bg-white border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/20 transition-all duration-200 rounded-sm" placeholder="Cours / Ressources / Autre">
+                                </div>
+                                <div>
+                                    <label for="msg" class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium">Message</label>
+                                    <textarea id="msg" rows="3" class="w-full bg-white border border-gray-200 px-4 py-3 text-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/20 transition-all duration-200 rounded-sm resize-none" placeholder="Dites-nous en plus..."></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-gold text-white py-4 font-heading font-semibold uppercase tracking-wider text-sm hover:bg-gold-light transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center group">
+                                    Envoyer
+                                    <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-brand-gray">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <h2 class="text-2xl md:text-3xl font-heading font-bold text-brand-black mb-4">Intéressé par nos formations ?</h2>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Contactez-nous pour discuter de vos besoins en formation ou pour accéder aux ressources pédagogiques.</p>
+                <a href="index.html#contact" class="inline-flex items-center justify-center px-8 py-4 bg-gold text-white font-heading font-semibold text-sm uppercase tracking-wider hover:bg-gold-light transition-all duration-300 shadow-lg">
+                    Nous contacter
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gradient-to-br from-[#0f1923] via-[#162230] to-[#1a2a3a] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12 mb-16">
+                <div>
+                    <a href="index.html" class="font-heading font-bold text-2xl tracking-tight text-white block mb-6">
+                        NDUHURA <span class="text-gold">EXPERTISE</span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mb-8">
+                        Cabinet d'expertise en transformation digitale, management de projets IT et ingénierie logicielle. L'excellence au service de votre performance.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-white transition-all duration-300 text-gray-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-white transition-all duration-300 text-gray-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-white transition-all duration-300 text-gray-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-white">Navigation</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html#a-propos" class="text-gray-400 hover:text-gold transition-colors text-sm">À propos</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-gold transition-colors text-sm">Que faisons-nous ?</a></li>
+                        <li><a href="index.html#offre" class="text-gray-400 hover:text-gold transition-colors text-sm">Notre Offre</a></li>
+                        <li><a href="enseignement.html" class="text-gray-400 hover:text-gold transition-colors text-sm">Enseignement</a></li>
+                        <li><a href="index.html#actualites" class="text-gray-400 hover:text-gold transition-colors text-sm">Actualités</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-gold transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-white">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex flex-col">
+                            <span class="text-white font-medium mb-1">Suisse</span>
+                            <span>Rue de Lyon 44, 1203 Genève</span>
+                        </li>
+                        <li class="flex flex-col">
+                            <span class="text-white font-medium mb-1">RDC</span>
+                            <span>Kinshasa</span>
+                        </li>
+                        <li class="pt-4">
+                            <a href="mailto:contact@nduhura-expertise.com" class="hover:text-gold transition-colors">contact@nduhura-expertise.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2025 Nduhura Expertise. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+                    <a href="#" class="hover:text-white transition-colors">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Mobile menu (from script.js)
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            let isMenuOpen = false;
+
+            function toggleMenu() {
+                isMenuOpen = !isMenuOpen;
+                if (isMenuOpen) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileOverlay.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileOverlay.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            }
+
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+            mobileOverlay.addEventListener('click', toggleMenu);
+        });
+    </script>
+</body>
+</html>
