@@ -1,23 +1,13 @@
-# TODO: Ajout page Enseignement
+# TODO: Implémenter navbar active state (gold color)
 
-## Plan approuvé - Étapes à compléter:
+## Plan approuvé - Étapes:
 
-### ✅ Étape 1: Créer TODO.md (en cours)
-
-### ✅ Étape 2: Créer enseignement.html (nouvelle page complète)
-
-### ✅ Étape 3: Modifier index.html 
-- Ajouter lien "Enseignement" dans navigation desktop/mobile
-- Mettre à jour lien 6ème offre vers enseignement.html
-
-### ✅ Étape 4: Modifier script.js 
-- Gérer nouveau lien mobile menu si nécessaire (non nécessaire - toggle existant OK)
-
-### ⏳ Étape 5: Tester 
-- Responsive design
-- Navigation fonctionne
-- Styles cohérents
-- Ouvrir preview
-
-### ✅ Étape 6: Finaliser et compléter
+- [x] **Step 1:** Créer ce fichier TODO.md (fait)
+- [x] **Step 2:** Ajouter classe CSS .nav-active dans styles.css ✅
+- [x] **Step 3:** Implémenter fonction JS setActiveNav() dans script.js ✅
+- [ ] **Step 4:** Tester sur toutes les pages (index.html, enseignement.html, publications.html, offre-details.html)
+  - Vérifier desktop et mobile nav
+  - Confirmer couleur gold + font-semibold sur lien actif
+- [ ] **Step 5:** Nettoyer manual active dans publications.html (optionnel)
+- [ ] Compléter et fermer task
 

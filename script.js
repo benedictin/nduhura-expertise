@@ -56,3 +56,34 @@ window.addEventListener('scroll', () => {
         header.classList.add('bg-white/95', 'py-6');
     }
 });
+
+// Navbar active state functionality
+function setActiveNav() {
+    const currentPath = window.location.pathname + window.location.hash;
+    const navLinks = document.querySelectorAll('nav a[href], #mobile-menu a[href]');
+    
+    navLinks.forEach(link => {
+        link.classList.remove('nav-active');
+        
+        let linkPath = link.getAttribute('href');
+        if (linkPath.startsWith('#')) {
+            // Handle hash links
+            if (currentPath.endsWith(linkPath)) {
+                link.classList.add('nav-active');
+            }
+        } else {
+            // Handle page links
+            const linkFullPath = linkPath.includes('index.html') ? new URL(linkPath, window.location.origin).pathname : '/' + linkPath;
+            const currentPage = window.location.pathname === '/' ? '/index.html' : window.location.pathname;
+            if (linkFullPath === currentPage || linkPath === currentPage.split('/').pop()) {
+                link.classList.add('nav-active');
+            }
+        }
+    });
+}
+
+// Event listeners for active nav
+document.addEventListener('DOMContentLoaded', setActiveNav);
+window.addEventListener('hashchange', setActiveNav);
+window.addEventListener('resize', setActiveNav);
+

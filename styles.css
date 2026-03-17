@@ -77,3 +77,8 @@ html {
     opacity: 1;
     pointer-events: auto;
 }
+
+.nav-active {
+    color: var(--gold);
+    font-weight: 600;
+}
